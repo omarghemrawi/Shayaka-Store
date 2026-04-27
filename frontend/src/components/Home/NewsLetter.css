@@ -1,0 +1,72 @@
+.newsletter {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.newsletter h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.newsletter-input {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.newsletter-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.newsletter-input button {
+  background: #d49696;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: #f3dede;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  color: #555;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.icons span {
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}

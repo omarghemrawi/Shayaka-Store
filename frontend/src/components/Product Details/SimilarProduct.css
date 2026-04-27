@@ -1,0 +1,59 @@
+/* Similar Products */
+
+.similar-products{
+    margin: 50px auto 0 auto;
+    width: 90%;
+    height: fit-content;
+
+}
+.similar-products .similar-grid{
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+}
+.similar-products .similar-card{
+    background-color: #fff;
+    height: 480px;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.similar-products .similar-card img{
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+}
+.similar-products .similar-card .similar-info{
+    height: 20%;
+}
+.similar-products .similar-card .similar-name{
+    font-weight: 600;
+    color: #2c2c2c;
+    font-size: 20px;
+}
+.similar-products .similar-card .similar-price{
+    color: #d49696;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 0;
+    font-size: 18px;
+}
+.similar-products .similar-card .similar-price .new-price{
+    color: #d49696;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.similar-products .similar-card .add-to-cart{
+    border: none;
+    padding: 8px 14px;
+    background-color: #d49696;
+    color: white;
+    border-radius: 8px;
+    width: fit-content;
+    cursor: pointer;
+    font-weight: 700;
+}
