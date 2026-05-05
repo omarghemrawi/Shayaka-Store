@@ -1,9 +1,10 @@
 /* ── Reviews Section ── */
 .reviews-section {
-  margin-top: 70px;
   padding-top: 40px;
   border-top: 1px solid #e8e0d8;
   font-family: 'Georgia', serif;
+  width: 95%;
+  margin: 50px auto;
 }
 
 .reviews-section .section-title {

@@ -32,12 +32,12 @@
     width: 100%;
     height: auto;
 }
-.sizes {
+.top-controle .sizes {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.size-btn {
+.top-controle .sizes .size-btn {
   border: 1px solid #ddd;
   background: white;
   padding: 8px 14px;
@@ -45,13 +45,13 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.size-btn:hover {
+.top-controle .sizes .size-btn:hover {
   border-color: #d49696;
 }
 
 
 /* ACTIVE (selected) */
-.size-btn.active {
+.top-controle .sizes .size-btn.active {
   background: #d49696;
   color: white;
   border-color: #d49696;
