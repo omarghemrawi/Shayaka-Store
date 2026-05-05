@@ -1,0 +1,21 @@
+.containerOfCollection {
+  display: flex;
+  align-items: flex-start; /* مهم — يمنع الـ filter من يتمدد */
+  gap: 20px;
+}
+
+/* Filter — ثابت ما بيتحرك */
+.filter-part {
+  width: 260px;
+  flex-shrink: 0; /* مهم — يمنعه من يصغر */
+  position: sticky;
+  top: 0;         /* ثابت من فوق */
+  height: 100vh;  /* بيبقى بنفس ارتفاع الشاشة */
+  overflow-y: auto; /* إذا الـ filter طويل بيتسكرول لحاله */
+}
+
+/* Products — بيتسكرول */
+.container-products {
+  flex: 1;        /* بياخد باقي المساحة */
+  overflow-y: auto;
+}

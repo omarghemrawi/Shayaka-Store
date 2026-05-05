@@ -1,4 +1,4 @@
-import Navbar from "../components/Home/Navbar.jsx";
+import Navbar from "../components/Navbar.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
 import Category from "../components/Home/Category.jsx";
 import ProductDisplay from "../components/Home/ProductDisplay.jsx";
@@ -9,7 +9,6 @@ import NewsLetter from "../components/Home/NewsLetter.jsx";
 const HomePage = () => {
   return (
     <div className="home-page">
-      <Navbar />
       <HeroSection />
       <ProductDisplay title="Dress" />
       <ProductDisplay title="Shoes" />
