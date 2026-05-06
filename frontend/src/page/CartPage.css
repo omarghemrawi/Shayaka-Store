@@ -1,0 +1,115 @@
+.cart-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: start;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+}
+
+.cart-container h1{
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+/* Header  */
+.cart-header{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Product */
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-product img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.cart-product-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart-product-details :first-child{
+    font-weight: bold;
+}
+
+.quantity-cart {
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #ccc;
+  width: 100px;
+  padding: 4px 8px;
+}
+.quantity-cart button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Order Summary */
+.order-summary{
+    background-color: #e9e9e9;
+    align-self: center;
+    padding: 20px 14px;
+    border-radius: 4px;
+}
+.order-summary h2{
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.order-summary .summary-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: #7e7e7e;
+
+}
+.order-summary .summary-row.total-price{
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
+.summary-item button{
+     width: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.checkout-btn{
+    background-color: #ccc;
+    margin-bottom: 2px;
+}
+.continue-shopping-btn{
+    background-color: transparent;
+}
