@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { ShoppingCart, ShoppingBag, ShoppingBasket, Store } from "lucide-react";
 import { Search, Heart, User } from "lucide-react";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+const Navbar = ({ login }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,19 +29,33 @@ const Navbar = () => {
           <li>
             <Link to="/sale">Sale</Link>
           </li>
-          <li>
-            <Link to="/cart">
-              <ShoppingCart size={20} />
-            </Link>
-          </li>
-          <li>
-            <Link to="/wishlist">
-              <Heart size={20} />
-            </Link>
-          </li>
-          <li>
-            <User size={20} />
-          </li>
+
+          {login ? (
+            <>
+              <li>
+                <Link to="/cart">
+                  <ShoppingCart size={20} />
+                </Link>
+              </li>
+              <li>
+                <Link to="/wishlist">
+                  <Heart size={20} />
+                </Link>
+              </li>
+              <li>
+                <User size={20} />
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/signup">Signup</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>
