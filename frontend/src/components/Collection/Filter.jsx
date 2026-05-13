@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 import "./Filter.css";
 const Filter = () => {
-  const sizes = ["XS", "S", "M", "L", "XL"];
-  const [selectedSize, setSelectedSize] = useState([]);
   const [value, setValue] = useState(100);
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("Newest Arrivals");
@@ -65,26 +63,7 @@ const Filter = () => {
           <span>${value}</span>
         </div>
       </div>
-      <div className="size-filter">
-        <h3>Size</h3>
-        <div className="size-btn-container">
-          {sizes.map((size) => (
-            <button
-              key={size}
-              className={`size-btn ${selectedSize.includes(size) ? "active" : ""}`}
-              onClick={() => {
-                setSelectedSize((prev) =>
-                  prev.includes(size)
-                    ? prev.filter((s) => s !== size)
-                    : [...prev, size],
-                );
-              }}
-            >
-              {size}
-            </button>
-          ))}
-        </div>
-      </div>
+
       <div className="sort-by">
         <h3>Sort By</h3>
         <div className="dropdown">

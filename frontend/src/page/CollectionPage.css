@@ -1,20 +1,75 @@
-.containerOfCollection {
-  display: flex;
-  align-items: flex-start; 
-  gap: 20px;
+.containerOfCollection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-
-.filter-part {
-  width: 260px;
-  flex-shrink: 0; 
-  position: sticky;
-  top: 0;         
-  height: 100vh;  
-  overflow-y: auto; 
+.collection-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.container-products {
-  flex: 1;        
-  overflow-y: auto;
+.discountHeading{
+    width: 100%;
+    min-height: 260px;
+    border-radius: 24px;
+    margin-bottom: 10px;
+    padding: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+
+    background:
+      linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+      ),
+      url("https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1600&auto=format&fit=crop")
+      center/cover no-repeat;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.discountHeading::before{
+    content: "UP TO 70% OFF";
+    
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    background-color: #ff4d6d;
+    color: white;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.discountHeading::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      120deg,
+      rgba(255,255,255,0.08),
+      transparent 40%
+    );
+
+    pointer-events: none;
 }

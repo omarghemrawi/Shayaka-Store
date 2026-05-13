@@ -2,11 +2,18 @@ import React from "react";
 import Filter from "../components/Collection/Filter";
 import ShowCollectionProduct from "../components/Collection/ShowCollectionProduct";
 import "./CollectionPage.css";
-const CollectionPage = () => {
+const CollectionPage = ({ isDiscountPage }) => {
   return (
     <div className="containerOfCollection">
-      <Filter />
-      <ShowCollectionProduct />
+      {isDiscountPage && <h1 className="discountHeading">Discount Products</h1>}
+
+      <div className="collection-content">
+        <Filter />
+        <ShowCollectionProduct
+          key={isDiscountPage ? "sale" : "collection"}
+          isDiscount={isDiscountPage}
+        />
+      </div>
     </div>
   );
 };
