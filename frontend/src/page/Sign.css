@@ -1,0 +1,125 @@
+.sign{
+    padding: 15px 20px;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card-container {
+    perspective: 1200px;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    min-width: 320px;
+    height: 520px;
+}
+.sign .card-face{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 16px;
+    width: 100%;
+    max-width: 420px;
+    min-width: 320px;
+    padding: 40px 32px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);  
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-front {
+  transform: rotateY(0deg);
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-front {
+  transform: rotateY(-180deg);
+}
+.card-container.flipped .card-back {
+  transform: rotateY(0deg);
+}
+.sign input{
+    border: none;
+    border-radius: 4px;
+    margin: 0;
+    padding: 14px 16px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.sign input:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(224, 89, 100, 0.4);
+}
+.sign .Recover{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: Arial, sans-serif;
+}
+.sign  a{
+    color: black;
+    width: fit-content;
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-weight: 600;
+}
+.sign  a:hover {
+    text-decoration: underline;      
+    color: rgb(62, 62, 62);         
+}
+.sign button{
+    background-color: rgb(245, 132, 132);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-size: 16px;
+    letter-spacing: 1.9px;
+    cursor: pointer;
+     transition: 0.2s ease; 
+}
+.sign button:hover {
+    background-color: rgb(255, 112, 112); 
+}
+.sign button:active {
+    transform: scale(0.98);           
+}
+.checkbox-row {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #444;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: rgb(245, 132, 132);
+}
+
+.checkbox-label a {
+  color: rgb(245, 132, 132);
+  font-size: 13px;
+}
+
+@media (max-width: 400px) {
+      .card-face {
+        padding: 28px 20px;
+    }
+}
+
+
