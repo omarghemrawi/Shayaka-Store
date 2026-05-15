@@ -5,8 +5,9 @@ import Navbar from "./components/Navbar.jsx";
 import CollectionPage from "./page/CollectionPage.jsx";
 import CartPage from "./page/CartPage.jsx";
 import WishlistPage from "./page/WishlistPage.jsx";
+import ProfilePage from "./page/ProfilePage.jsx";
 import { Routes, Route } from "react-router-dom";
-
+import Sign from "./page/Sign.jsx";
 function App() {
   return (
     <>
@@ -22,6 +23,8 @@ function App() {
             path="/sale"
             element={<CollectionPage isDiscountPage={true} />}
           />
+          <Route path="/sign" element={<Sign />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </main>
     </>

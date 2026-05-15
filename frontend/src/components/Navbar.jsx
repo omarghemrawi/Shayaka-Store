@@ -9,11 +9,11 @@ const Navbar = ({ login }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // triggers after 50px scroll
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
@@ -43,16 +43,18 @@ const Navbar = ({ login }) => {
                 </Link>
               </li>
               <li>
-                <User size={20} />
+                <Link to="/profile">
+                  <User size={20} />
+                </Link>
               </li>
             </>
           ) : (
             <>
               <li>
-                <Link to="/login">Login</Link>
+                <Link to="/sign?mode=login">Login</Link>
               </li>
               <li>
-                <Link to="/signup">Signup</Link>
+                <Link to="/sign?mode=signup">Sign Up</Link>
               </li>
             </>
           )}
