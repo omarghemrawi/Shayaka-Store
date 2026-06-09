@@ -3,14 +3,19 @@
     margin: 0;
     box-sizing: border-box;
     user-select: none;
+    font-family: 'Georgia', serif;
 }
 body{
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(50deg, #ffcdcd, #ff9090);
+    background-color: bisque;
     min-height: 100vh;
     width: 95%;
     margin: 0 auto;
 }
 main{
-    margin-top: 10px;
+    padding-top: 80px;
+}
+@media (max-width: 768px) {
+    body{
+        width: 100%;
+    }
 }

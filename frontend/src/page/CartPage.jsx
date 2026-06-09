@@ -6,6 +6,7 @@ import bags2 from "../assets/Feature Products/bags2.jpg";
 import heels1 from "../assets/Feature Products/heels1.jpg";
 import pants1 from "../assets/Feature Products/pants1.jpg";
 import outerwear1 from "../assets/Feature Products/outerwear1.jpg";
+import OrderSummary from "../components/OrderSummary.jsx";
 const CartPage = () => {
   const products = [
     {
@@ -79,48 +80,7 @@ const CartPage = () => {
           </div>
         ))}
       </div>
-      <div className="order-summary">
-        <h2>Order Summary</h2>
-        <div className="summary-item">
-          <div className="summary-row">
-            <span>
-              Subtotal (
-              {products.reduce((total, product) => total + product.quantity, 0)}
-              )
-            </span>
-            <span>
-              $
-              {products.reduce(
-                (total, product) => total + product.price * product.quantity,
-                0,
-              )}
-            </span>
-          </div>
-          <div className="summary-row">
-            <span>delivery fee </span>
-            <span>$5</span>
-          </div>
-          <div className="summary-row total-price">
-            <span>Total</span>
-            <span>
-              $
-              {products.reduce(
-                (total, product) => total + product.price * product.quantity,
-                0,
-              ) + 5}
-            </span>
-          </div>
-          <button className="checkout-btn">Go To Checkout</button>
-          <button
-            className="continue-shopping-btn"
-            onClick={() => {
-              window.history.back();
-            }}
-          >
-            <FaArrowLeft /> Continue Shopping
-          </button>
-        </div>
-      </div>
+      <OrderSummary products={products} viewCase="cart" />
     </div>
   );
 };

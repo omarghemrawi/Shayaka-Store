@@ -1,0 +1,113 @@
+.modal-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content{
+    background-color: #fff8f8;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    border-radius: 16px;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.modal-header button{
+    background-color: transparent;
+    width: 24px;
+    height: 32px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+.form-group .address-details , .form-group .info-details{
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group  .row{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-group  .row label{
+    font-size: 18px;
+    font-weight: 500;
+}
+.form-group  .row input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group .row.default-address{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.switch-button{
+    width: 60px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 20px;
+    position: relative;
+}
+.switch-button.active{
+background-color: rgb(245, 132, 132);
+}
+.switch-circle {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.switch-button.active .switch-circle {
+  left: calc(100% - 25px);
+}
+.address-form button{
+    padding: 10px;
+    background-color: rgb(245, 132, 132);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 700px)  {
+    .form-group{
+        flex-direction: column;
+    }
+    .modal-content{
+        width: 90%;
+    }
+}
