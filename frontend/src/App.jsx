@@ -8,10 +8,14 @@ import WishlistPage from "./page/WishlistPage.jsx";
 import ProfilePage from "./page/ProfilePage.jsx";
 import { Routes, Route } from "react-router-dom";
 import Sign from "./page/Sign.jsx";
+import Checkout from "./page/Checkout.jsx";
+import Footer from "./components/Footer.jsx";
+import Payment from "./page/Payment.jsx";
 function App() {
+  const total = 100; // Example total amount, replace with actual calculation based on cart items
   return (
     <>
-      <Navbar login={true} />
+      <Navbar login={false} />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -25,8 +29,11 @@ function App() {
           />
           <Route path="/sign" element={<Sign />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment" element={<Payment cartTotal={total} />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }

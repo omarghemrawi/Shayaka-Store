@@ -1,0 +1,39 @@
+.order-summary{
+    background-color: #ffecec;
+    align-self: center;
+    padding: 20px 14px;
+    border-radius: 4px;
+}
+.order-summary h2{
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.order-summary .summary-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: #7e7e7e;
+}
+.order-summary .summary-row.total-price{
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
+.summary-item button{
+     width: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.checkout-btn{
+    background-color: #ffffff;
+    margin-bottom: 2px;
+}
+.continue-shopping-btn{
+    background-color: transparent;
+}

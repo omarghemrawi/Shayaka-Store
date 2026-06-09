@@ -56,7 +56,7 @@ const SimilarProduct = () => {
                 <span className="new-price">{p.price}</span>
                 <span className="old-price">{p.oldPrice}</span>
               </div>
-              <button className="add-to-cart">Add To Cart</button>
+              <button className="add-to-cart">View Details</button>
             </div>
           </div>
         ))}
