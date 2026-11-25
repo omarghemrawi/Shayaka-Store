@@ -7,10 +7,7 @@ const HeroSection = () => {
       <div className="hero-section-content">
         <h1>Upgrade Your Style Today</h1>
         <p>Discover the Latest Trends with exclusive deals and fast delivery</p>
-        <div className="btn-group">
-          <button>Shop Now</button>
-          <button>View Details</button>
-        </div>
+        <button>Shop Now</button>
       </div>
     </div>
   );

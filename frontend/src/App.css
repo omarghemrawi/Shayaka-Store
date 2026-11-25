@@ -2,20 +2,34 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    user-select: none;
-    font-family: 'Georgia', serif;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 body{
     background-color: bisque;
     min-height: 100vh;
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    font-family: 'Georgia', serif;
 }
 main{
-    padding-top: 80px;
+    padding-top: 5rem;
+    width: 100%;
 }
-@media (max-width: 768px) {
-    body{
-        width: 100%;
-    }
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+  }
 }

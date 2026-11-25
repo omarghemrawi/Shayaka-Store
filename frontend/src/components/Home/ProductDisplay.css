@@ -8,19 +8,18 @@
 }
 .product-card{
     display: flex;
-    min-width: 200px;
+    min-width: 150px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(254, 124, 124, 0.2);
-    /* transform: translateY(-50px); */
     transition: box-shadow 0.3s ease, transform 1s ease;
 }
 .product-card:hover{
     box-shadow: 0 8px 25px rgba(254, 124, 124, 0.5);
-    transform: translateY(-5px);
+    transform: translateY(-1px);
 }
 .product-card h3{
     font-size: 18px;
@@ -28,7 +27,7 @@
 }
 .product-card p{
     font-size: 16px;
-    margin: 10px;
+    margin-bottom: 10px;
     color: #555;
 }
 .product-card button{
@@ -88,4 +87,16 @@
 }
 .img-container .wishList:hover{
     font-size: 26px;
+}
+@media (min-width: 768px){
+    .product-card{
+        min-width: 200px;
+        height: max-content;
+    }
+    .product-card h3{
+        font-size: 20px;
+    }
+    .product-card p{
+        font-size: 18px;
+    }
 }
